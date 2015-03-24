@@ -7,3 +7,22 @@
 */
 
 /* Simplicity子テーマ用のスタイルを書く */
+/* Sidebar */
+#sidebar .widget {
+  text-align: center;
+}
+/* Widget Title */
+#sidebar h4.widgettitle {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+h4.widgettitle {
+  text-align: center;
+  font-family: 'Cabin', Helvetica, Arial, sans-serif;
+  display: inline-block;
+  margin: 0 0 40px;
+  color: #434343;
+  text-transform: uppercase;
+  border-bottom: 3px solid #78c1c4;
+  letter-spacing: 1px;
+}
