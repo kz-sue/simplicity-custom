@@ -7,6 +7,13 @@
 */
 
 /* Simplicity子テーマ用のスタイルを書く */
+/* 背景画像の設定 */
+body {
+	background-image: url("images/bg_color.png"), url("images/bg_paper.gif");
+    background-position: left top, left top;
+    background-repeat: repeat-x, repeat;
+    color: #333;
+}
 /* Sidebar */
 #sidebar .widget {
   text-align: center;
