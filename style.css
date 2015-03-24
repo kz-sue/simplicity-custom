@@ -14,6 +14,36 @@ body {
     background-repeat: repeat-x, repeat;
     color: #333;
 }
+/* SNS用アイコン */
+ul.snsp li a {
+  color: #bbb38a;
+  font-size: 30px;
+}
+ul.snsp li a i {
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  border: 1px solid #bbb38a;
+  border-radius: 50%;
+  line-height: 35px;
+  text-align: center;
+  background: none;
+}
+ul.snsp li i.icon-feedly{ 
+  font-size: 33.5px;
+  width: 35px;
+  height: 35px;
+  position: relative;
+  top: 3px;
+}
+ul.snsp li i:before { padding 0; line-height: 35px; }
+ul.snsp li a:hover i { background: #cac08a; }
+ul.snsp li a:hover .fa-twitter { color: #fff; background: #00aced; }
+ul.snsp li a:hover .fa-facebook { color: #fff; background: #3b5998; }
+ul.snsp li a:hover .fa-google-plus { color: #fff; background: #c53727; }
+ul.snsp li a:hover .fa-instagram { color: #fff; background: #3f729b; }
+ul.snsp li a:hover .icon-feedly { color: #fff; background: #87C040; }
+ul.snsp li a:hover .fa-rss { color: #fff; background: #ff8c00; }
 /* Sidebar */
 #sidebar .widget {
   text-align: center;
