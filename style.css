@@ -14,6 +14,13 @@ body {
     background-repeat: repeat-x, repeat;
     color: #333;
 }
+/* リンク時の効果 */
+a {
+  -webkit-transition: all 0.15s ease-in-out;
+  -ms-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
 /* SNS用アイコン */
 ul.snsp li a {
   color: #bbb38a;
@@ -44,6 +51,36 @@ ul.snsp li a:hover .fa-google-plus { color: #fff; background: #c53727; }
 ul.snsp li a:hover .fa-instagram { color: #fff; background: #3f729b; }
 ul.snsp li a:hover .icon-feedly { color: #fff; background: #87C040; }
 ul.snsp li a:hover .fa-rss { color: #fff; background: #ff8c00; }
+/* ナビゲーション(header) */
+#navi ul.menu {
+  text-align: center;
+  font-family: 'Cabin', Helvetica, Arial, sans-serif;
+  padding: 10px 0 10px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background: none;
+}
+#navi ul li {
+  float: none;
+  display: inline-block;
+  /display:inline;
+  /zoom:1;
+  padding: .3em .7em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+#navi ul li a {
+  color: #454545;
+  padding: 0;
+}
+#navi ul li a:hover {
+  background: #78c1c4;
+  color: #fff !important;
+}
+.current-menu-item a {
+  border-bottom: 2px dotted #aaa;
+}
 /* Sidebar */
 #sidebar .widget {
   text-align: center;
