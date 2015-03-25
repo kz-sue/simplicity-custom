@@ -89,6 +89,9 @@ ul.snsp li a:hover .fa-rss { color: #fff; background: #ff8c00; }
 #sidebar .widget {
   text-align: center;
 }
+#sidebar ul {
+  padding: 0;
+}
 /* Widget Title */
 #sidebar h4.widgettitle {
   font-size: 14px;
@@ -103,6 +106,15 @@ h4.widgettitle {
   text-transform: uppercase;
   border-bottom: 3px solid #78c1c4;
   letter-spacing: 1px;
+}
+/* 各Widgetの区切り線 */
+.widget {
+  background-image: url("images/b_simple_114_0S.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
 }
 /* Autor */
 #post-by {
