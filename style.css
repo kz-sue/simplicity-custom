@@ -9,10 +9,10 @@
 /* Simplicity子テーマ用のスタイルを書く */
 /* 背景画像の設定 */
 body {
-	background-image: url("images/bg_color.png"), url("images/bg_paper.gif");
+/*	background-image: url("images/bg_color.png"), url("images/bg_paper.gif");
     background-position: left top, left top;
     background-repeat: repeat-x, repeat;
-    color: #333;
+    color: #333; */
 }
 /* elegant font Icon */
 span.et {
@@ -115,6 +115,43 @@ h4.widgettitle {
   margin-top: 20px;
   margin-bottom: 30px;
   padding-bottom: 15px;
+}
+/* 記事 */
+.post-header {
+  margin-bottom: 20px;
+}
+/* 投稿日 */
+.post-header .post-date {
+  float: left;
+  margin-right: 10px;
+  background: #434343;
+  color: #ddd;
+  width: 40px;
+  height: 40px;
+  padding: 18px;
+  line-height: 1.3em;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  
+}
+.radius-100 {
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50%;
+}
+.post-header .post-date span {
+  color: #fff;
+  font-size: 1.3em;
+}
+/* 記事タイトル */
+.article h1 {
+  margin-bottom: 0px;
+  padding-top: 20px;
+}
+/* 更新日＆カテゴリー */
+.post-meta {
+  background: none;
 }
 /* Autor */
 #post-by {
