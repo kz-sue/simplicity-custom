@@ -3,22 +3,26 @@
   <div class="article<?php if ( !is_single() ) echo ' article-list'; ?>">
   <?php  if ( is_single() ) get_template_part('sns-buttons-sharebar'); //スクロール追従シェアバー ?>
 
-  <h1 class="entry-title">
+  <div class="post-header">
+	<header>
+    <h1 class="entry-title">
     <?php if ( !is_single() ) echo '<a href="'.get_permalink().'">'; //投稿ページ以外ではタイトルにリンクを貼る?>
     <?php the_title(); //投稿のタイトル?>
     <?php if ( !is_single() ) echo '</a>'; //投稿ページ以外ではタイトルにリンクを貼る?>
-  </h1>
-  <p class="post-meta">
+    </h1>
+    <p class="post-meta">
     <?php get_template_part('datetime') //投稿日と更新日?>
     <?php if ( is_category_visible() && //カテゴリを表示する場合
                get_the_category() ): //投稿ページの場合?>
-    <span class="category"><span class="icon_folder-alt"></span><?php the_category(', ') ?></span>
+    <div class="balloon"><span class="category"><?php the_category(', ') ?></span></div>
     <?php endif; ?>
 
     <?php get_template_part('edit-link'); //編集リンク?>
 
     <?php wlw_edit_post_link('WLWで編集', '<span class="wlw-edit"><i class="fa fa-pencil-square-o fa-fw"></i>', '</span>'); ?>
-  </p>
+    </p>
+	</header>
+  </div>
 
   <?php if ( is_single() ) get_template_part('ad-top');//記事トップ広告 ?>
 
