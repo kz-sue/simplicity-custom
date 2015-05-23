@@ -55,6 +55,17 @@ ul.snsp li a:hover .fa-google-plus { color: #fff; background: #c53727; }
 ul.snsp li a:hover .fa-instagram { color: #fff; background: #3f729b; }
 ul.snsp li a:hover .icon-feedly { color: #fff; background: #87C040; }
 ul.snsp li a:hover .fa-rss { color: #fff; background: #ff8c00; }
+/* SNSシェアボタン */
+a.balloon-btn-link {
+  width: 30px;
+  height: 30px;
+  margin: 1px 15px 0 15px;
+  padding-top: 1px;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  font-size: 18px;
+}
 /* ナビゲーション(header) */
 #navi ul.menu {
   text-align: center;
