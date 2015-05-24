@@ -25,6 +25,10 @@ a {
   -o-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
 }
+/* 記事を囲む枠 */
+#main {
+  border: none;
+}
 /* SNS用アイコン */
 ul.snsp li a {
   color: #bbb38a;
@@ -145,7 +149,6 @@ h4.widgettitle {
   font-size: 12px;
   text-align: center;
   text-transform: uppercase;
-  
 }
 .radius-100 {
   -moz-border-radius: 50px;
@@ -201,8 +204,25 @@ h4.widgettitle {
 .post header .balloon span a:hover {
   text-decoration: underline;
 }
-.post header h2, .post header .post-meta {
+.post header h2, .post header .post-meta, .post header h1 {
   margin-left: 60px;
+}
+/* サムネイル表示 */
+#main .entry{
+  clear:none;
+  margin:10px 10px 100px 10px;
+}
+.entry-thumb {
+  float: none;
+  margin-right: 0;
+  margin-bottom: 10px;
+  text-align:center;
+}
+.entry-thumb img{
+  margin-bottom:0;
+}
+.entry-content {
+  margin-left: 0;
 }
 /* 記事タイトル */
 .article h1 {

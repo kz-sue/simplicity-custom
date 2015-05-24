@@ -5,3 +5,4 @@ function include_parent_skins(){
 }
 
 //以下にSimplicity子テーマ用の関数を書く
+add_image_size('thumb540',540,180,true);//600×180のサムネイルを作成
