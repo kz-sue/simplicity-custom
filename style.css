@@ -25,6 +25,10 @@ a {
   -o-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
 }
+/* 記事を囲む枠 */
+#main {
+  border: none;
+}
 /* SNS用アイコン */
 ul.snsp li a {
   color: #bbb38a;
@@ -55,6 +59,17 @@ ul.snsp li a:hover .fa-google-plus { color: #fff; background: #c53727; }
 ul.snsp li a:hover .fa-instagram { color: #fff; background: #3f729b; }
 ul.snsp li a:hover .icon-feedly { color: #fff; background: #87C040; }
 ul.snsp li a:hover .fa-rss { color: #fff; background: #ff8c00; }
+/* SNSシェアボタン */
+a.balloon-btn-link {
+  width: 30px;
+  height: 30px;
+  margin: 1px 15px 0 15px;
+  padding-top: 1px;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  font-size: 18px;
+}
 /* ナビゲーション(header) */
 #navi ul.menu {
   text-align: center;
@@ -121,6 +136,7 @@ h4.widgettitle {
   margin-bottom: 20px;
 }
 /* 投稿日 */
+/*
 .post-header .post-date {
   float: left;
   margin-right: 10px;
@@ -133,7 +149,6 @@ h4.widgettitle {
   font-size: 12px;
   text-align: center;
   text-transform: uppercase;
-  
 }
 .radius-100 {
   -moz-border-radius: 50px;
@@ -143,6 +158,71 @@ h4.widgettitle {
 .post-header .post-date span {
   color: #fff;
   font-size: 1.3em;
+}*/
+/* カテゴリ */
+.post-header {
+  position: relative;
+}
+.post .balloon {
+  display:block;
+  position:absolute;
+  left:-60px;
+  top:-20px;
+  width:100px;
+  height:100px;
+  background:#78c1c4;
+  -webkit-border-radius:50px;
+  -moz-border-radius:50px;
+  -o-border-radius:50px;
+  border-radius:50px;
+  color:#FFF;
+}
+.post header .balloon span:after {
+  content: "";
+  position: absolute;
+  bottom: -27px;
+  left:85px;
+  z-index: 1000;
+  margin-left: -8px;
+  border-top:0;
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+  border-bottom: 13px solid #78c1c4;
+}
+.post header .balloon span {
+  display:block;
+  position:absolute;
+  top:38px;
+  left:0;
+  width:98px;
+  text-align:center;
+}
+.post header .balloon span a {
+  color: #FFF;
+  text-decoration: none;
+}
+.post header .balloon span a:hover {
+  text-decoration: underline;
+}
+.post header h2, .post header .post-meta, .post header h1 {
+  margin-left: 60px;
+}
+/* サムネイル表示 */
+#main .entry{
+  clear:none;
+  margin:10px 10px 100px 10px;
+}
+.entry-thumb {
+  float: none;
+  margin-right: 0;
+  margin-bottom: 10px;
+  text-align:center;
+}
+.entry-thumb img{
+  margin-bottom:0;
+}
+.entry-content {
+  margin-left: 0;
 }
 /* 記事タイトル */
 .article h1 {
