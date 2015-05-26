@@ -28,6 +28,8 @@ a {
 /* 記事を囲む枠 */
 #main {
   border: none;
+  margin-left: 0;
+  margin-right: 0;
 }
 /* SNS用アイコン */
 ul.snsp li a {
@@ -166,10 +168,10 @@ h4.widgettitle {
 .post .balloon {
   display:block;
   position:absolute;
-  left:-60px;
+  left:-15px;
   top:-20px;
-  width:100px;
-  height:100px;
+  width:90px;
+  height:90px;
   background:#78c1c4;
   -webkit-border-radius:50px;
   -moz-border-radius:50px;
@@ -180,10 +182,10 @@ h4.widgettitle {
 .post header .balloon span:after {
   content: "";
   position: absolute;
-  bottom: -27px;
-  left:85px;
+  bottom: -24px;
+  left:70px;
   z-index: 1000;
-  margin-left: -8px;
+  margin-left: -6px;
   border-top:0;
   border-left: 13px solid transparent;
   border-right: 13px solid transparent;
@@ -192,9 +194,9 @@ h4.widgettitle {
 .post header .balloon span {
   display:block;
   position:absolute;
-  top:38px;
+  top:33px;
   left:0;
-  width:98px;
+  width:88px;
   text-align:center;
 }
 .post header .balloon span a {
@@ -205,7 +207,7 @@ h4.widgettitle {
   text-decoration: underline;
 }
 .post header h2, .post header .post-meta, .post header h1 {
-  margin-left: 60px;
+  margin-left: 90px;
 }
 /* サムネイル表示 */
 #main .entry{

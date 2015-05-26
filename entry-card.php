@@ -3,7 +3,7 @@
   <header class="post-header">
 	<h2><a href="<?php the_permalink(); ?>" class="entry-title"><?php echo get_the_title(); ?></a></h2>
     <p class="post-meta">
-      <span class="post-date"><i class="fa fa-clock-o fa-fw"></i><?php the_time('Y/n/j') ;?></span>
+      <span class="post-date"><span class="et icon_clock_alt"></span><?php the_time('Y/n/j') ;?></span>
     </p><!-- /.post-meta -->
     <?php if (is_category_visible()): ?>
     <div class="balloon"><span class="category"><?php the_category(', ') ?></span></div>
@@ -12,9 +12,9 @@
 
   <div class="entry-thumb">
     <?php if ( has_post_thumbnail() ): // サムネイルを持っているときの処理 ?>
-      <a href="<?php the_permalink(); ?>" class="entry-image"><?php the_post_thumbnail( 'thumb600', array('style' => 'width:600px;height:180px;') ); ?></a>
+      <a href="<?php the_permalink(); ?>" class="entry-image"><?php the_post_thumbnail( 'thumb480', array('style' => 'width:480px;height:180px;') ); ?></a>
     <?php else: // サムネイルを持っていないときの処理 ?>
-      <a href="<?php the_permalink(); ?>" class="entry-image"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/no-image-600.png" alt="NO IMAGE" title="NO IMAGE" style="width:600px;height:180px;" class="no-image list-no-image" /></a>
+      <a href="<?php the_permalink(); ?>" class="entry-image"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/no-image-480.png" alt="NO IMAGE" title="NO IMAGE" style="width:480px;height:180px;" class="no-image list-no-image" /></a>
     <?php endif; ?>
   </div><!-- /.entry-thumb -->
 
