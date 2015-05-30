@@ -34,13 +34,13 @@ a {
 /* SNS用アイコン */
 ul.snsp li a {
   color: #bbb38a;
-  font-size: 30px;
 }
 ul.snsp li a i {
   width: 35px;
   height: 35px;
   margin: 0;
   border: 1px solid #bbb38a;
+  font-size: 30px;
   border-radius: 50%;
   line-height: 35px;
   text-align: center;
