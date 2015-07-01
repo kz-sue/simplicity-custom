@@ -12,9 +12,9 @@
 
   <div class="entry-thumb">
     <?php if ( has_post_thumbnail() ): // サムネイルを持っているときの処理 ?>
-      <a href="<?php the_permalink(); ?>" class="entry-image"><?php the_post_thumbnail( 'thumb480', array('style' => 'width:480px;height:180px;') ); ?></a>
+      <a href="<?php the_permalink(); ?>" class="entry-image"><?php the_post_thumbnail( 'thumb320', array('style' => 'width:320px;height:180px;') ); ?></a>
     <?php else: // サムネイルを持っていないときの処理 ?>
-      <a href="<?php the_permalink(); ?>" class="entry-image"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/no-image-480.png" alt="NO IMAGE" title="NO IMAGE" style="width:480px;height:180px;" class="no-image list-no-image" /></a>
+      <a href="<?php the_permalink(); ?>" class="entry-image"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/no-image.png" alt="NO IMAGE" title="NO IMAGE" style="width:320px;height:180px;" class="no-image list-no-image" /></a>
     <?php endif; ?>
   </div><!-- /.entry-thumb -->
 
