@@ -234,6 +234,51 @@ h4.widgettitle {
   margin-bottom: 0px;
   padding-top: 20px;
 }
+/* 見出し */
+.article h2 {
+	border-top: 2px solid #78c1c4;
+	border-left: none;
+	border-bottom: 1px solid #ddd;
+	padding: 15px 30px 15px 30px;
+	background-image: -webkit-gradient(linear, left top, right bottom,
+			from(			rgba(255, 255, 255, 0.0)), 
+			color-stop(0.4, rgba(255, 255, 255, 0.0)), 
+			color-stop(0.4, rgba(0, 0, 0, 0.1)), 
+			color-stop(0.6, rgba(0, 0, 0, 0.1)), 
+			color-stop(0.6, rgba(255, 255, 255, 0.0)),
+			to(				rgba(255, 255, 255, 0.0))
+			);
+	background-image: -webkit-linear-gradient(top -45deg,
+			transparent 40%,
+            rgba(0, 0, 0, 0.1) 40%,
+            rgba(0, 0, 0, 0.1) 60%,
+            transparent 60%
+			);
+	background-image: -moz-linear-gradient(top -45deg,
+			transparent 40%,
+            rgba(0, 0, 0, 0.1) 40%,
+            rgba(0, 0, 0, 0.1) 60%,
+            transparent 60%
+			);
+	background-image: -o-linear-gradient(top -45deg,
+			transparent 40%,
+            rgba(0, 0, 0, 0.1) 40%,
+            rgba(0, 0, 0, 0.1) 60%,
+            transparent 60%
+			);
+	background-image: linear-gradient(to bottom -45deg,
+			transparent 40%,
+            rgba(0, 0, 0, 0.1) 40%,
+            rgba(0, 0, 0, 0.1) 60%,
+            transparent 60%
+			);
+	background-size:4px 4px;
+}
+.article h3 {
+	border-bottom: 2px solid #78c1c4;}
+.article h4 {
+	border-bottom: 2px dashed #ddd;
+}
 /* 更新日＆カテゴリー */
 .post-meta {
   background: none;
