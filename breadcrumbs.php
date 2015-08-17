@@ -6,7 +6,7 @@ if($cat && !is_wp_error($cat)){
     echo '<div id="breadcrumb" class="breadcrumb-category">';
     echo '<div itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><span class="icon_house"></span><a href="'.home_url().'" itemprop="url"><span itemprop="title">ホーム</span></a><span class="sp"><i class="fa fa-angle-right"></i></span></div>';
     while($par && !is_wp_error($par) && $par->term_id != 0){
-	    $echo = '<div itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><span class="icon_folder-alt"></span>a href="'.get_category_link($par->term_id).'" itemprop="url"><span itemprop="title">'.$par->name.'</span></a><span class="sp"><i class="fa fa-angle-right"></i></span></div>'.$echo;
+	    $echo = '<div itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><span class="icon_folder-alt"></span><a href="'.get_category_link($par->term_id).'" itemprop="url"><span itemprop="title">'.$par->name.'</span></a><span class="sp"><i class="fa fa-angle-right"></i></span></div>'.$echo;
 	    $par = get_category($par->parent);
     }
     echo $echo.'<div itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><span class="icon_folder-alt"></span><a href="'.get_category_link($cat[0]->term_id).'" itemprop="url"><span itemprop="title">'.$cat[0]->name.'</span></a></div>';
