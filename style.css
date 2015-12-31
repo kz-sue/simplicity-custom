@@ -13,6 +13,7 @@ body {
     background-position: left top, left top;
     background-repeat: repeat-x, repeat;
     color: #333; */
+    background-color: #F3E9E1;
 }
 /* elegant font Icon */
 span.et {
@@ -27,9 +28,43 @@ a {
 }
 /* 記事を囲む枠 */
 #main {
+  width: 770px;
   border: none;
   margin-left: 0;
   margin-right: 0;
+  background-color: transparent;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* トップページの記事表示 */
+#main #list .entry {
+  width: 350px;
+  margin: 15px 10px 0px 10px;
+  background-color: #fff;
+  border: none;
+}
+/* トップページの記事表示の下部分 */
+.entry .entry-card-content {
+  height: 125px;
+}
+/* トップページの記事表示の日付 */
+.entry .post-meta {
+  font-size: 14px;
+  color: #999;
+  padding-top: 5px;
+}
+/* トップページの記事表示のカテゴリ */
+.entry .post-meta .category {
+  margin-left: 15px;
+  color: #79c3c5;
+}
+.entry .post-meta .category a{
+  color: #79c3c5;
+}
+/* トップページの記事表示のタイトル */
+.entry h2 a {
+  color: #777;
+  font-weight: normal;
 }
 /* SNS用アイコン */
 ul.snsp li a {
@@ -96,7 +131,7 @@ a.balloon-btn-link {
   padding: 0;
 }
 #navi ul li a:hover {
-  background: #78c1c4;
+  background: #79c3c5;
   color: #fff !important;
 }
 .current-menu-item a {
@@ -135,10 +170,10 @@ h4.widgettitle {
 }
 /* 記事 */
 .post-header {
-  margin-bottom: 20px;
+/*   margin-bottom: 20px; */
 }
 /* 投稿日 */
-/*
+/* バルーン表示
 .post-header .post-date {
   float: left;
   margin-right: 10px;
@@ -162,6 +197,7 @@ h4.widgettitle {
   font-size: 1.3em;
 }*/
 /* カテゴリ */
+/*
 .post-header {
   position: relative;
 }
@@ -210,11 +246,12 @@ h4.widgettitle {
 .post header h2, .post header .post-meta, .post header h1 {
   margin-left: 90px;
 }
+*/
 /* サムネイル表示 */
+/*
 #main .entry{
   clear:none;
-  margin-bottom: 150px !important;
-/*  margin:10px 10px 100px 10px;*/
+  margin-bottom: 200px !important;
   padding: 20px 0 0 15px;
 }
 .entry-thumb {
@@ -229,6 +266,7 @@ h4.widgettitle {
 .entry-content {
   margin-left: 0;
 }
+*/
 /* 記事タイトル */
 .article h1 {
   margin-bottom: 0px;

@@ -1,25 +1,24 @@
-<?php //投稿をのリスト表示のループ内で呼び出されるサムネイルカード ?>
-<div id="post-<?php the_ID(); ?>" <?php post_class('entry') ?>>
-  <header class="post-header">
-	<h2><a href="<?php the_permalink(); ?>" class="entry-title"><?php echo get_the_title(); ?></a></h2>
-    <p class="post-meta">
-      <span class="post-date"><span class="et icon_clock_alt"></span><?php the_time('Y/n/j') ;?></span>
-    </p><!-- /.post-meta -->
-    <?php if (is_category_visible()): ?>
-    <div class="balloon"><span class="category"><?php the_category(', ') ?></span></div>
-    <?php endif; ?>
-  </header>
-
+<?php //投稿一覧リストのループ内で呼び出されるエントリーカード ?>
+<div id="post-<?php the_ID(); ?>" <?php post_class('entry cf'.(is_list_style_large_thumb_cards() ? ' entry-large-thumbnail' : '').( is_entry_card_style() ? ' entry-card' : '')) ?>>
   <div class="entry-thumb">
-    <?php if ( has_post_thumbnail() ): // サムネイルを持っているときの処理 ?>
-      <a href="<?php the_permalink(); ?>" class="entry-image"><?php the_post_thumbnail( 'thumb320', array('style' => 'width:320px;height:180px;') ); ?></a>
-    <?php else: // サムネイルを持っていないときの処理 ?>
-      <a href="<?php the_permalink(); ?>" class="entry-image"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/no-image.png" alt="NO IMAGE" title="NO IMAGE" style="width:320px;height:180px;" class="no-image list-no-image" /></a>
+    <?php if ( is_entry_card_style() ): //デフォルトのサムネイルカード表示の場合?>
+      <?php if ( has_post_thumbnail() ): // サムネイルを持っているとき ?>
+        <a href="<?php the_permalink(); ?>" class="entry-image entry-image-link" title="<?php the_title(); ?>"><?php the_post_thumbnail( 'thumb350', array('class' => 'entry-thumnail', 'alt' => get_the_title(), 'style' => 'width:350px;height:183px;') ); ?></a>
+      <?php else: // サムネイルを持っていない ?>
+        <a href="<?php the_permalink(); ?>" class="entry-image entry-image-link" title="<?php the_title(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/no-image.png" alt="NO IMAGE" class="entry-thumnail no-image list-no-image" /></a>
+      <?php endif; ?>
+    <?php else: //大きなサムネイルカードの場合?>
+      <?php if ( has_post_thumbnail() ): // サムネイルを持っているとき
+        //サムネイル画像の縦横比を保存するかどうかで取得するサムネイルを変化
+        $thumb = ( is_list_style_tile_thumb_cards_raw() ? 'thumb320_raw' : 'thumb350') ?>
+        <a href="<?php the_permalink(); ?>" class="entry-image entry-image-link" title="<?php the_title(); ?>"><?php the_post_thumbnail($thumb , array('class' => 'entry-thumnail', 'alt' => get_the_title(), 'style' => 'width:350px;height:183px;') ); ?></a>
+      <?php else: // サムネイルを持っていないとき ?>
+        <a href="<?php the_permalink(); ?>" class="entry-image entry-image-link" title="<?php the_title(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/no-image-320.png" alt="NO IMAGE" class="entry-thumnail no-image list-no-image" /></a>
+      <?php endif; ?>
     <?php endif; ?>
   </div><!-- /.entry-thumb -->
 
-  <div class="entry-content">
-	<p class="entry-snippet"><?php echo get_the_custom_excerpt( get_the_content(''), get_excerpt_length() ); //カスタマイズで指定した文字の長さだけ本文抜粋?></p>
-    <p class="entry-read"><a href="<?php the_permalink(); ?>">記事を読む</a></p>
-  </div><!-- /.entry-content -->
+  <?php //エントリーカードのコンテンツ部分を呼び出す
+  get_template_part('entry-card-content') ?>
+
 </div>
