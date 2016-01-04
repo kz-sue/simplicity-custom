@@ -14,7 +14,7 @@
     <?php get_template_part('datetime') //投稿日と更新日?>
     <?php if ( is_category_visible() && //カテゴリを表示する場合
                get_the_category() ): //投稿ページの場合?>
-    <div class="balloon"><span class="category"><?php the_category(', ') ?></span></div>
+    <span class="category"><span class="icon_folder"></span><?php the_category(', ') ?></span>
     <?php endif; ?>
 
     <?php get_template_part('edit-link'); //編集リンク?>
